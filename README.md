@@ -18,4 +18,4 @@ A escolha certa começa aqui ...
 
 ## Desenvolvedores
 
-Desenvovlido por Hulysses Magalhães, Igor Meira, Kauã Heidemann Se Vinicius Ghizani.
+Desenvovlido por Hulysses Magalhães, Igor Meira, Kauã Heidemann e Vinicius Ghizani.
