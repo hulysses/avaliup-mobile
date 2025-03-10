@@ -1,4 +1,3 @@
-import { ActivityIndicator } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { Home } from "./screens/Home";
 import {
@@ -10,6 +9,7 @@ import {
 } from "@expo-google-fonts/ubuntu";
 
 import theme from "@theme/index";
+import { Loading } from "@components/Loading";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -21,7 +21,7 @@ export default function Index() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <Home /> : <Loading />}
     </ThemeProvider>
   );
 }
