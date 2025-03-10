@@ -1,11 +1,3 @@
-import {
-  useFonts,
-  Ubuntu_300Light,
-  Ubuntu_400Regular,
-  Ubuntu_500Medium,
-  Ubuntu_700Bold,
-} from "@expo-google-fonts/ubuntu";
-
 export default {
   COLORS: {
     WHITE_400: "#FFFFFF",
@@ -26,12 +18,12 @@ export default {
 
     BLUE_LIGTH: "#01BAEF ",
   },
-  FONT_FAMILY: useFonts({
-    LIGTH: Ubuntu_300Light,
-    REGULAR: Ubuntu_400Regular,
-    MEDIUM: Ubuntu_500Medium,
-    BOLD: Ubuntu_700Bold,
-  }),
+  FONT_FAMILY: {
+    LIGHT: "Ubuntu_300Light",
+    REGULAR: "Ubuntu_400Regular",
+    MEDIUM: "Ubuntu_500Medium",
+    BOLD: "Ubuntu_700Bold",
+  },
   FONT_SIZE: {
     SM: 14,
     MD: 16,
