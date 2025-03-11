@@ -1,13 +1,13 @@
 import { Button, ButtonText } from "./styles";
 
-type ButtonFillProps = {
+type ButtonProps = {
   text: string;
   type: "fill" | "border";
 };
 
-export function ButtonFill({ text, type = "fill" }: ButtonFillProps) {
+export function Buttons({ text, type = "fill" }: ButtonProps) {
   return (
-    <Button type={type}>
+    <Button type={type} activeOpacity={0.6}>
       <ButtonText type={type}>{text}</ButtonText>
     </Button>
   );

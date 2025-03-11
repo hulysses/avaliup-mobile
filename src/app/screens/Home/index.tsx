@@ -1,4 +1,4 @@
-import { ButtonFill } from "@components/Button";
+import { Buttons } from "@components/Buttons";
 import { ButtonsSection, Container, Logo, LogoSection, Title } from "./styles";
 
 export function Home() {
@@ -9,8 +9,8 @@ export function Home() {
         <Title>Avali.up</Title>
       </LogoSection>
       <ButtonsSection>
-        <ButtonFill text="Entrar" type="fill" />
-        <ButtonFill text="Cadastrar" type="border" />
+        <Buttons text="Entrar" type="fill" />
+        <Buttons text="Cadastrar" type="border" />
       </ButtonsSection>
     </Container>
   );
