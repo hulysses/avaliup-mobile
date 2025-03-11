@@ -1,9 +1,30 @@
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { ThemeProvider } from "styled-components/native";
+import {
+  useFonts,
+  Ubuntu_300Light,
+  Ubuntu_400Regular,
+  Ubuntu_500Medium,
+  Ubuntu_700Bold,
+} from "@expo-google-fonts/ubuntu";
+
+import { Loading } from "@components/Loading";
+import theme from "@theme/index";
+import { Home } from "./screens/Home";
+import { Container } from "./styles";
 
 export default function Index() {
+  const [fontsLoaded] = useFonts({
+    Ubuntu_300Light,
+    Ubuntu_400Regular,
+    Ubuntu_500Medium,
+    Ubuntu_700Bold,
+  });
+
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <StatusBar style="auto" />
+      <Container>{fontsLoaded ? <Home /> : <Loading />}</Container>
+    </ThemeProvider>
   );
 }
