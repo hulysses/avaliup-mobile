@@ -1,8 +1,9 @@
-export declare global {
-    namespace ReactNavigation {
-        interface RootParamList {
-        home: undefined;
-        register: undefined;
-        }
+export {};
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList {
+      home: undefined;
+      register: undefined;
     }
+  }
 }
