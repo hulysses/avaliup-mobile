@@ -1,5 +1,5 @@
+import { StatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components/native";
-import { Home } from "./screens/Home";
 import {
   useFonts,
   Ubuntu_300Light,
@@ -8,8 +8,9 @@ import {
   Ubuntu_700Bold,
 } from "@expo-google-fonts/ubuntu";
 
-import theme from "@theme/index";
 import { Loading } from "@components/Loading";
+import theme from "@theme/index";
+import { Home } from "./screens/Home";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -21,6 +22,7 @@ export default function Index() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar style="auto" />
       {fontsLoaded ? <Home /> : <Loading />}
     </ThemeProvider>
   );
