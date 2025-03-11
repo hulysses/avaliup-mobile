@@ -1,12 +1,5 @@
-import {
-  Container,
-  Logo,
-  LogoSection,
-  Title,
-  ButtonsSection,
-  Button,
-  ButtonText,
-} from "./styles";
+import { ButtonFill } from "@components/Button";
+import { ButtonsSection, Container, Logo, LogoSection, Title } from "./styles";
 
 export function Home() {
   return (
@@ -16,12 +9,8 @@ export function Home() {
         <Title>Avali.up</Title>
       </LogoSection>
       <ButtonsSection>
-        <Button activeOpacity={0.6}>
-          <ButtonText>Entrar</ButtonText>
-        </Button>
-        <Button activeOpacity={0.6}>
-          <ButtonText>Cadastrar</ButtonText>
-        </Button>
+        <ButtonFill text="Entrar" type="fill" />
+        <ButtonFill text="Cadastrar" type="border" />
       </ButtonsSection>
     </Container>
   );
