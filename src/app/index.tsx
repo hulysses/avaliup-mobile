@@ -7,9 +7,11 @@ import {
   Ubuntu_500Medium,
   Ubuntu_700Bold,
 } from "@expo-google-fonts/ubuntu";
+import { NavigationContainer } from "@react-navigation/native";
+
 import { Loading } from "@components/Loading";
 import theme from "@theme/index";
-import { Home } from "./screens/Home";
+import { AppRoutes } from "../routes/app.routes";
 import { Container } from "./styles";
 
 export default function Index() {
@@ -23,7 +25,7 @@ export default function Index() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
-      <Container>{fontsLoaded ? <Home /> : <Loading />}</Container>
+      <Container>{fontsLoaded ? <AppRoutes /> : <Loading />}</Container>
     </ThemeProvider>
   );
 }
