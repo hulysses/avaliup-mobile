@@ -11,6 +11,7 @@ import {
 import { Loading } from "@components/Loading";
 import theme from "@theme/index";
 import { Home } from "./screens/Home";
+import { Container } from "./styles";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -23,7 +24,7 @@ export default function Index() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
-      {fontsLoaded ? <Home /> : <Loading />}
+      <Container>{fontsLoaded ? <Home /> : <Loading />}</Container>
     </ThemeProvider>
   );
 }
