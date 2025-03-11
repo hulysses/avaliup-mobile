@@ -7,7 +7,6 @@ import {
   Ubuntu_500Medium,
   Ubuntu_700Bold,
 } from "@expo-google-fonts/ubuntu";
-
 import { Loading } from "@components/Loading";
 import theme from "@theme/index";
 import { Home } from "./screens/Home";
