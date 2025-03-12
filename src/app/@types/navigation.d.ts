@@ -4,6 +4,7 @@ declare global {
     interface RootParamList {
       home: undefined;
       register: undefined;
+      login: undefined;
     }
   }
 }
