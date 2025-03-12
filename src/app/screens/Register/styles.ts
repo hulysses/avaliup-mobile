@@ -7,9 +7,3 @@ export const Title = styled.Text`
   color: ${({ theme }: { theme: DefaultTheme }) => theme.COLORS.BLUE_DARK_400};
   margin-bottom: 16px;
 `;
-
-export const InputSection = styled.View`
-  flex: 1;
-  justify-content: center;
-  gap: 16px;
-`;

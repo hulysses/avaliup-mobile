@@ -1,7 +1,8 @@
 import { Buttons } from "@components/Buttons";
-import { ButtonsSection, Logo, LogoSection, Title } from "./styles";
+import { Logo, LogoSection, Title } from "./styles";
 import LogoImg from "@assets/logo-teclado.png";
 import { useNavigation } from "@react-navigation/native";
+import { Sections } from "@components/Sections";
 
 export function Home() {
   const navigation = useNavigation();
@@ -16,14 +17,14 @@ export function Home() {
         <Logo source={LogoImg} />
         <Title>Avali.up</Title>
       </LogoSection>
-      <ButtonsSection>
+      <Sections>
         <Buttons text="Entrar" type="fill" />
         <Buttons
           text="Cadastrar"
           type="border"
           onPress={handleRedirectRegisterScreen}
         />
-      </ButtonsSection>
+      </Sections>
     </>
   );
 }

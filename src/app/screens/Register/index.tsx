@@ -1,8 +1,9 @@
 import { BackButton } from "@components/BackButton";
-import { InputSection, Title } from "./styles";
+import { Title } from "./styles";
 import { Input } from "@components/Input";
 import { Buttons } from "@components/Buttons";
 import { useNavigation } from "expo-router";
+import { Sections } from "@components/Sections";
 
 export function Register() {
   const navigation = useNavigation();
@@ -13,7 +14,7 @@ export function Register() {
   return (
     <>
       <BackButton onPress={handleGoBack} />
-      <InputSection>
+      <Sections>
         <Title>Cadastro</Title>
         <Input
           label="E-mail"
@@ -27,7 +28,7 @@ export function Register() {
           isPassword={true}
         />
         <Buttons text="Cadastrar" type="fill" />
-      </InputSection>
+      </Sections>
     </>
   );
 }
