@@ -15,14 +15,18 @@ export function Register() {
       <BackButton onPress={handleGoBack} />
       <InputSection>
         <Title>Cadastro</Title>
-        <Input label="E-mail" placeholder="Insira seu e-mail" />
-        <Input label="Senha" placeholder="Insira sua senha" secureTextEntry />
+        <Input
+          label="E-mail"
+          placeholder="Insira seu e-mail"
+          isPassword={false}
+        />
+        <Input label="Senha" placeholder="Insira sua senha" isPassword={true} />
         <Input
           label="Confirmar senha"
           placeholder="Confirme sua senha"
-          secureTextEntry
+          isPassword={true}
         />
-        <Buttons text="Cadastrar" type="fill"/>
+        <Buttons text="Cadastrar" type="fill" />
       </InputSection>
     </>
   );
