@@ -34,16 +34,20 @@ type InputProps = {
   label: string;
   placeholder: string;
   value?: string;
-  onChangeText?: (text: string) => void;
+  kewboardType?: string;
+  autoCapitalize?: string;
   isPassword?: boolean;
+  onChangeText?: (text: string) => void;
 };
 
 export function Input({
   label,
   placeholder,
   value,
-  onChangeText,
+  kewboardType,
+  autoCapitalize,
   isPassword,
+  onChangeText,
 }: InputProps) {
   const [secureTextEntry, setSecureTextEntry] = useState(isPassword ?? false);
 
@@ -54,8 +58,10 @@ export function Input({
         <InputField
           placeholder={placeholder}
           value={value}
-          onChangeText={onChangeText}
+          keyboardType={kewboardType ?? "default"}
+          autoCapitalize={autoCapitalize ?? "words"}
           secureTextEntry={secureTextEntry}
+          onChangeText={onChangeText}
         />
         {isPassword && (
           <ToggleButton onPress={() => setSecureTextEntry(!secureTextEntry)}>
