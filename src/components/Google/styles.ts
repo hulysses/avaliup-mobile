@@ -9,5 +9,5 @@ export const GoogleIcon = styled(AntDesign).attrs(
     size: 16,
   })
 )`
-    margin-right: 4px;
+    margin-right: 8px;
 `;
