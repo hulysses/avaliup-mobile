@@ -4,6 +4,8 @@ import { Buttons } from "@components/Buttons";
 import { useNavigation } from "expo-router";
 import { Sections } from "@components/Sections";
 import { H1 } from "@components/H1";
+import { Google } from "@components/Google";
+import { Separator } from "@components/Separator";
 
 export function Register() {
   const navigation = useNavigation();
@@ -28,6 +30,8 @@ export function Register() {
           isPassword={true}
         />
         <Buttons text="Cadastrar" type="fill" />
+        <Separator />
+        <Google />
       </Sections>
     </>
   );
