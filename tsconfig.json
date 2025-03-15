@@ -13,5 +13,5 @@
       "@types/*": ["@types/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "src/components/H1/index.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "src/components/H1/index.tsx", "src/components/Google/index.tsx"]
 }

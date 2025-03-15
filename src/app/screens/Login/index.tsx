@@ -1,10 +1,11 @@
 import { useNavigation } from "expo-router";
-import {} from "./styles";
 import { BackButton } from "@components/BackButton";
 import { Sections } from "@components/Sections";
 import { Input } from "@components/Input";
 import { Buttons } from "@components/Buttons";
 import { H1 } from "@components/H1";
+import { Google } from "@components/Google";
+import { Separator } from "@components/Separator";
 
 export function Login() {
   const navigation = useNavigation();
@@ -30,6 +31,8 @@ export function Login() {
           autoCapitalize="none"
         />
         <Buttons text="Entrar" type="fill" />
+        <Separator />
+        <Google />
       </Sections>
     </>
   );
