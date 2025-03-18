@@ -1,4 +1,5 @@
 import styled, { DefaultTheme } from "styled-components/native";
+import { Ionicons } from "@expo/vector-icons";
 
 type ButtonProps = {
   type: "fill" | "border";
@@ -28,7 +29,9 @@ const getTextColor = ({
   type: "fill" | "border";
 }) => (type === "border" ? theme.COLORS.BLUE_DARK_400 : theme.COLORS.WHITE_400);
 
-export const Button = styled.TouchableOpacity<ButtonProps>`
+export const TouchableOpacity = styled.TouchableOpacity<ButtonProps>`
+  flex-direction: row;
+  gap: 8px;
   background-color: ${getBackgroundColor};
   padding: 12px 0;
   align-items: center;
@@ -43,3 +46,10 @@ export const ButtonText = styled.Text<ButtonProps>`
   font-size: ${({ theme }: { theme: DefaultTheme }) => theme.FONT_SIZE.MD};
   color: ${getTextColor};
 `;
+
+export const Icon = styled(Ionicons).attrs(
+  ({ theme }: { theme: DefaultTheme }) => ({
+    size: theme.FONT_SIZE.SM,
+    color: getTextColor({ theme, type: "border" }),
+  })
+)``;
