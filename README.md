@@ -15,6 +15,7 @@ A escolha certa começa aqui ...
 - React Native.
 - TypeScript.
 - SQLite.
+- Clerk Authentication.
 
 ## Desenvolvedores
 
