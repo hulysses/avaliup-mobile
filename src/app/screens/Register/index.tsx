@@ -1,10 +1,9 @@
 import { BackButton } from "@components/BackButton";
 import { Input } from "@components/Input";
-import { Buttons } from "@components/Buttons";
+import { Button } from "@components/Button";
 import { useNavigation } from "expo-router";
 import { Sections } from "@components/Sections";
 import { H1 } from "@components/H1";
-import { Google } from "@components/Google";
 import { Separator } from "@components/Separator";
 
 export function Register() {
@@ -21,17 +20,24 @@ export function Register() {
         <Input
           label="E-mail"
           placeholder="Insira seu e-mail"
-          isPassword={false}
+          autoCapitalize="none"
+          keyboardType="email-address"
         />
-        <Input label="Senha" placeholder="Insira sua senha" isPassword={true} />
+        <Input
+          label="Senha"
+          placeholder="Insira sua senha"
+          isPassword
+          autoCapitalize="none"
+        />
         <Input
           label="Confirmar senha"
           placeholder="Confirme sua senha"
-          isPassword={true}
+          isPassword
+          autoCapitalize="none"
         />
-        <Buttons text="Cadastrar" type="fill" />
+        <Button text="Cadastrar" type="fill" />
         <Separator />
-        <Google />
+        <Button text="Cadastrar com Google" type="border" icon="logo-google" />
       </Sections>
     </>
   );

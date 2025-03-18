@@ -7,7 +7,6 @@ import {
   Ubuntu_500Medium,
   Ubuntu_700Bold,
 } from "@expo-google-fonts/ubuntu";
-import { NavigationContainer } from "@react-navigation/native";
 
 import { Loading } from "@components/Loading";
 import theme from "@theme/index";

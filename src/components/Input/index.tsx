@@ -8,13 +8,12 @@ import {
   Label,
   ToggleButton,
 } from "./styles";
-import { Feather } from "@expo/vector-icons";
 
 type InputProps = {
   label: string;
   placeholder: string;
   value?: string;
-  kewboardType?: string;
+  keyboardType?: string;
   autoCapitalize?: string;
   isPassword?: boolean;
   onChangeText?: (text: string) => void;
@@ -24,13 +23,13 @@ export function Input({
   label,
   placeholder,
   value,
-  kewboardType,
+  keyboardType,
   autoCapitalize,
   isPassword,
   onChangeText,
 }: InputProps) {
   const [secureTextEntry, setSecureTextEntry] = useState(isPassword ?? false);
-
+   
   return (
     <Container>
       <Label>{label}</Label>
@@ -38,7 +37,7 @@ export function Input({
         <InputField
           placeholder={placeholder}
           value={value}
-          keyboardType={kewboardType ?? "default"}
+          keyboardType={keyboardType ?? "default"}
           autoCapitalize={autoCapitalize ?? "words"}
           secureTextEntry={secureTextEntry}
           onChangeText={onChangeText}

@@ -1,4 +1,4 @@
-import { Buttons } from "@components/Buttons";
+import { Button } from "@components/Button";
 import { Logo, LogoSection } from "./styles";
 import LogoImg from "@assets/logo-teclado.png";
 import { useNavigation } from "@react-navigation/native";
@@ -23,12 +23,8 @@ export function Home() {
         <H1>Avali.up</H1>
       </LogoSection>
       <Sections>
-        <Buttons
-          text="Entrar"
-          type="fill"
-          onPress={handleRedirectLoginScreen}
-        />
-        <Buttons
+        <Button text="Entrar" type="fill" onPress={handleRedirectLoginScreen} />
+        <Button
           text="Cadastrar"
           type="border"
           onPress={handleRedirectRegisterScreen}

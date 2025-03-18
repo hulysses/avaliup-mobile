@@ -2,13 +2,13 @@ import { useNavigation } from "expo-router";
 import { BackButton } from "@components/BackButton";
 import { Sections } from "@components/Sections";
 import { Input } from "@components/Input";
-import { Buttons } from "@components/Buttons";
+import { Button } from "@components/Button";
 import { H1 } from "@components/H1";
-import { Google } from "@components/Google";
 import { Separator } from "@components/Separator";
 
 export function Login() {
   const navigation = useNavigation();
+  
   function handleGoBack() {
     navigation.navigate("home");
   }
@@ -21,7 +21,7 @@ export function Login() {
         <Input
           label="E-mail"
           placeholder="Digite seu e-mail"
-          kewboardType="email-address"
+          keyboardType="email-address"
           autoCapitalize="none"
         />
         <Input
@@ -30,9 +30,9 @@ export function Login() {
           isPassword
           autoCapitalize="none"
         />
-        <Buttons text="Entrar" type="fill" />
+        <Button text="Entrar" type="fill" />
         <Separator />
-        <Google />
+        <Button text="Entrar com Google" type="border" icon="logo-google" />
       </Sections>
     </>
   );
