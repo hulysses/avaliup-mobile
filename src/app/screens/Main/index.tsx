@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Sections } from "@components/Sections";
 import { H1 } from "@components/H1";
 
-export function Home() {
+export function Main() {
   const navigation = useNavigation();
 
   function handleRedirectRegisterScreen() {

@@ -9,7 +9,7 @@ import { Separator } from "@components/Separator";
 export function Register() {
   const navigation = useNavigation();
   function handleGoBack() {
-    navigation.navigate("home");
+    navigation.navigate("main");
   }
 
   return (

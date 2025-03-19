@@ -8,9 +8,9 @@ import { Separator } from "@components/Separator";
 
 export function Login() {
   const navigation = useNavigation();
-  
+
   function handleGoBack() {
-    navigation.navigate("home");
+    navigation.navigate("main");
   }
 
   return (
@@ -32,7 +32,12 @@ export function Login() {
         />
         <Button text="Entrar" type="fill" />
         <Separator />
-        <Button text="Entrar com Google" type="border" icon="logo-google" />
+        <Button
+          text="Entrar com Google"
+          type="border"
+          icon="logo-google"
+          onPress={() => {}}
+        />
       </Sections>
     </>
   );
